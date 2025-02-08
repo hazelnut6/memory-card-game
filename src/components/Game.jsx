@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import Header from './Header.jsx';
+import Cards from './Cards.jsx';
 
 export default function Game() {
     const [loading, setLoading] = useState(true);
@@ -88,27 +90,11 @@ export default function Game() {
         return (
             <div>
                 <div className="header">
-                    <h1>Memory card game</h1>
-                    <p className="instructions">
-                        Instruction: Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi laudantium totam saepe incidunt assumenda ex quasi in placeat nam. Eum omnis ipsum ut dolorem, error amet reprehenderit aspernatur dolores laborum.
-                    </p>
-                    <p className="scores">
-                        <span>Score: {score}</span> <br />
-                        <span>Best score: {bestScore}</span>
-                    </p>
+                    <Header score={score} bestScore={bestScore} />
                 </div>
                 <div className="deck">
                     <ul>
-                        {data.map((d, i) => {
-                            return(
-                                <li key={i}>
-                                    <div className="card" onClick={() => {handleClick(d)}}>
-                                        <p>Name: {d.name}</p>
-                                        <img src={d.img} alt={`Image of ${d.name}`}/>
-                                    </div>
-                                </li>
-                            )
-                        })}
+                        <Cards data={data} handleClick={handleClick} />
                     </ul>
                 </div>
             </div>
