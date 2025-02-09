@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rule {
+    padding: 0 32px;
+}
+
+.rule span {
+    font-weight: 700;
+}
+
+.scores {
+    width: 18vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.scores span {
+    font-weight: 700;
+}

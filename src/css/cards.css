@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 230px);
+    gap: 20px;
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    border: 1px solid brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 7px;
+    background-color: rgb(143, 71, 42);
+}
+
+.pokeImg, .pokeName {
+    width: 80%;
+}
+
+.pokeImg {
+    height: 150px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+.pokeName {
+    text-align: center;
+    padding: 2px 0;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+}
+
+.pokeName::first-letter {
+    text-transform: capitalize;
+}
