@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Header from './Header.jsx';
 import Cards from './Cards.jsx';
+import '../css/game.css'
 
 export default function Game() {
     const [loading, setLoading] = useState(true);
@@ -48,6 +49,10 @@ export default function Game() {
         if(!clicked.includes(item.id)) {
             setClicked([...clicked, item.id]);
             setScore(score + 1);
+        } else if(score === 10) {
+            alert('YOU WIN🎉')
+            setScore(0);
+            setClicked([]);
         } else {
             alert('GAME OVER💀💀💀');
             setScore(0);
@@ -88,7 +93,7 @@ export default function Game() {
     //Successfully fetched data
     if(data) {
         return (
-            <div>
+            <div className='container'>
                 <div className="header">
                     <Header score={score} bestScore={bestScore} />
                 </div>
