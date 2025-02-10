@@ -5,7 +5,7 @@ export default function Header({score, bestScore}) {
     <header>
         <h1>Memory: Card game</h1>
         <p className="rule">
-          <span>Instruction:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi laudantium totam saepe incidunt assumenda ex quasi in placeat nam. Eum omnis ipsum ut dolorem, error amet reprehenderit aspernatur dolores laborum.
+          <span className='instruction'>Instruction:</span> Click the cards <span className="line">once</span> to gain points. Avoid clicking the same cards <span className='line'>twice</span>, as this will result in a game over and reset your score to zero.  
         </p>
         <p className="scores">
           <span>Score: {score}</span> <br />
