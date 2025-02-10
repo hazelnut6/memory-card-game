@@ -16,8 +16,13 @@ header {
     padding: 0 32px;
 }
 
-.rule span {
+.instruction {
     font-weight: 700;
+}
+
+.line {
+    text-decoration: underline;
+    font-style: italic;
 }
 
 .scores {
