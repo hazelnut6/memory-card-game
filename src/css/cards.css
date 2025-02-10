@@ -44,3 +44,20 @@
 .pokeName::first-letter {
     text-transform: capitalize;
 }
+
+/* sm */
+@media (width <= 40rem) {
+    .board {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 250px);
+    }
+}
+
+/* md */
+@media (41rem <= width < 64rem) {
+    .board {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 250px);
+    }
+}
+

@@ -30,3 +30,21 @@ header {
 .scores span {
     font-weight: 700;
 }
+
+/* sm */
+@media (width <= 40rem) {
+    .rule {
+        padding: 0 20px;
+    }
+
+    .scores {
+        width: 65vw;
+    }
+}
+
+/* md */
+@media (48rem <= width < 64rem) {
+    .scores {
+        width: 36vw;
+    }
+}
